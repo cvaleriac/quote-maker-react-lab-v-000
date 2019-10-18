@@ -10,7 +10,7 @@ export default (state = [], action) => {
     case "DOWNVOTE_QUOTE":
       if (state[quoteIndex].votes == 0) {
         return state
-      } else { 
+      } else {
         return [...state.slice(0, quoteIndex),
           {...state[quoteIndex], votes: state[quoteIndex].votes -= 1},
           ...state.slice(quoteIndex + 1)];
